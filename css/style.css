@@ -574,7 +574,7 @@ a{
     height: 300px;
     width: 75%;
     position: absolute;
-    top: 0;
+    top:0;
 }
 
 .history__photo__container_5 img{
@@ -594,18 +594,11 @@ a{
 
 }
 
-.history__photo__container_3 img{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    clip-path: polygon(10% 0, 100% 6%, 82% 82%, 3% 98%);
-}
-
 .history__photo__container_4{
-    height: 200px;
-    width: 45%;
+    height: 300px;
+    width: 100%;
     position: absolute;
-    top: 90px;
+    bottom: 0px;
     right: 10px;
     z-index: 4;
 
