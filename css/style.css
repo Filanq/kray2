@@ -1325,6 +1325,18 @@ a{
         padding: 5px 0;
         margin-bottom: 0px;
     }
+
+    .page__wrap{
+        flex-direction: column;
+    }
+
+    .photo__inner__page img{
+        width: 100%;
+    }
+
+    .text__inner__page{
+        text-align: center;
+    }
 }
 @media(max-width: 500px) {
     .nav__inner{
