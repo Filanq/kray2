@@ -59,7 +59,7 @@ html{
 }
 
 :root{
-    --color1: #549654;
+    --color1: #3aaa35;
     --color1_light: #47b042;
     --color1_dark: #2d9828;
     --color2:#0cb800;
@@ -894,7 +894,7 @@ a{
 /* Pages */
 
 .page__section{
-    background-image: url(../images/lipetsk.png);
+    background-image: url(../images/lipetsk.webp);
     height: 70vh;
     background-size: cover;
     background-position: center center;
@@ -988,7 +988,7 @@ a{
 }
 
 .elec{
-    background-image: url(../images/elec.png);
+    background-image: url(../images/elec.webp);
 }
 
 .lebed{
@@ -996,23 +996,23 @@ a{
 }
 
 .krasn{
-    background-image: url(../images/krasnoe.jpg);
+    background-image: url(../images/krasnoe.webp);
 }
 
 .gryazi{
-    background-image: url(../images/gryazi-phon2.jpg);
+    background-image: url(../images/gryazi-phon2.webp);
 }
 
 .zadonsk{
-    background-image: url(../images/zadonsk-phon.jpg);
+    background-image: url(../images/zadonsk-phon.webp);
 }
 
 .dankov{
-    background-image: url(../images/dankov-phon.jpg);
+    background-image: url(../images/dankov-phon.webp);
 }
 
 .usman{
-    background-image: url(../images/usman-phon.jpg);
+    background-image: url(../images/usman-phon.webp);
     background-position: center;
 }
 
