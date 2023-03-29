@@ -57,6 +57,10 @@
 html{
     scroll-behavior:smooth;
 }
+body{
+    overflow-x: hidden;
+    width: 100vw;
+}
 
 :root{
     --color1: #3aaa35;
@@ -109,6 +113,10 @@ a{
     padding: 0;
     background-color: var(--color1);
     z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+.op-0{
+    opacity: 0;
 }
 
 .fixed{
@@ -401,9 +409,6 @@ a{
     align-content: stretch;
     justify-items: stretch;
     align-items: stretch;
-    grid-template-areas:
-      "card card1 card2 card3"
-      "card4 card5 card6 card7";
     width: 75em;
 }
   
@@ -464,6 +469,7 @@ a{
 
 .history__section{
     background-color: var(--color1);
+    overflow: hidden;
 }
 
 .history__mini__title{
@@ -519,6 +525,7 @@ a{
     bottom: 20px;
     left: 80px;
 }
+
 
 .history__photo__container_1 img{
     width: 100%;
@@ -592,6 +599,26 @@ a{
     top: 60px;
     z-index: 3;
 
+}
+
+.swiper-button-next{
+    padding: 50px 30px;
+    color: transparent;
+    opacity: .7;
+    background-image: url('../images/arrow.png');
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.swiper-button-prev{
+    opacity: .7;
+    padding: 50px 30px;
+    color: transparent;
+    background-image: url('../images/arrow.png');
+    background-position: center center;
+    transform: rotate(180deg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .history__photo__container_4{
@@ -736,6 +763,7 @@ a{
 }
 
 .crestik{
+    flex: none;
     transform: rotate(45deg);
     width: 35px;
     height: 35px;
@@ -828,7 +856,6 @@ a{
     border: 1px solid var(--color1);
     margin-top: 20px;
 }
-
 .tel__container a:hover{
     color: var(--color1);
     background-color: white;
@@ -959,10 +986,12 @@ a{
 
 .footer__menu{
     align-items: flex-start;
+    align-items: center;
 }
 
 .footer__wrap_2{
     align-items: flex-start;
+    align-items: center;
 }
 
 .footer{
@@ -1063,6 +1092,14 @@ a{
     .contacts__title__inner h2 {
         font-size: 50px;
     }
+    .circle__contacts__text{
+        width: 90px;
+        height: 90px;
+        bottom: 0;
+    }
+    .circle__contacts__text p{
+        font-size: 15px;
+    }
 }
 
 @media(max-width: 1024px) {
@@ -1136,6 +1173,59 @@ a{
     .mySwiper {
         height: 500px;
     }
+    .rigth__inner__text h3{
+        text-align: center;
+    }
+    .rigth__inner__text{
+        width: 100%;
+    }
+    .header__subtitle{
+        margin-bottom: 20px;
+    }
+    .oblast__title span{
+        margin-left: 150px;
+        white-space: nowrap;
+    }
+    .history__picture__inner{
+        width: 80%;
+    }
+    .history__wrap_reverse{
+        margin-bottom: 0;
+        flex-flow: column;
+    }
+    .gallery__title span{
+        margin-left: 35px;
+    }
+
+    .gallery__wrap{
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
+
+    .gallery__text__inner {
+        width: 100%;
+    }
+
+    .gallery__title span {
+        display: block;
+        width: 420px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    .number__nav__inner{
+        display: none;
+    }
+    .nav__wrap_2{
+        display: none;
+    }
+    .circle__contacts__text{
+        bottom: -20px;
+        right: -20px;
+    }
+    .contact__text{
+        margin-left: 25px;
+        white-space: nowrap;
+    }
 }
 
 @media(max-width: 768px) {
@@ -1144,9 +1234,12 @@ a{
         padding-right: 25px;
     }
 
-    .nav__wrap__menu{
-        justify-content: flex-start;
-        flex-wrap: wrap;
+    .nav__wrap{
+        flex-flow: column;
+        align-items: center;
+        margin: 0;
+        align-self: center;
+        width: 100%;
     }
     
     .nav__inner_white {
@@ -1179,7 +1272,7 @@ a{
     }
 
     .oblast__title {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .history__photo__container_1,
@@ -1196,21 +1289,6 @@ a{
 
     .history__photo__container_4 {
         left: 150px;
-    }
-
-    .gallery__wrap{
-        flex-direction: column;
-        padding-bottom: 25px;
-    }
-
-    .gallery__text__inner {
-        width: 100%;
-    }
-
-    .gallery__title span {
-        display: block;
-        width: 350px;
-        margin-bottom: 20px;
     }
     
     .ui-accordion .ui-accordion-header {
@@ -1230,12 +1308,12 @@ a{
         display: none;
     }
     
-    .footer__menu {
-        flex-wrap: wrap;
-    }
 
     .history__text__inner p {
         font-size: 18px;
+    }
+    .history__title{
+        margin-bottom: 10px;
     }
 
     .text__slide p {
@@ -1246,5 +1324,33 @@ a{
         font-size: 18px;
         padding: 5px 0;
         margin-bottom: 0px;
+    }
+}
+@media(max-width: 500px) {
+    .nav__inner{
+        height: auto;
+        margin: 0 5px;
+    }
+    .nav__text{
+        font-size: 10px;
+    }
+    .footer__a{
+        font-size: 16px;
+    }
+    .history__text__inner p{
+        font-size: 14px;
+    }
+    .history__picture__inner{
+        width: 50%;
+    }
+    .oblast__title span{
+        margin-left: 30px;
+    }
+    .oblast__title{
+        white-space: nowrap;
+    }
+    .gallery__title span{
+        margin-left: 0;
+        width: 300px;
     }
 }
