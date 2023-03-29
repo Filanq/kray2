@@ -1315,6 +1315,9 @@ a{
     .history__title{
         margin-bottom: 10px;
     }
+    .history__wrap, .history__wrap_reverse{
+        margin: 50px 0;
+    }
 
     .text__slide p {
         font-size: 18px;
@@ -1336,12 +1339,6 @@ a{
     }
     .footer__a{
         font-size: 16px;
-    }
-    .history__text__inner p{
-        font-size: 14px;
-    }
-    .history__picture__inner{
-        width: 50%;
     }
     .oblast__title span{
         margin-left: 30px;
