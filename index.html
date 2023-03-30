@@ -88,7 +88,7 @@
         <div class="container">
             <div class="inner">
                 <div class="inner title__oblast__inner">
-                    <h2 class="oblast__title">УНИКАЛЬНЫЕ РАЙОНЫ<br><span>ЛИПЕЦКОЙ ОБЛАСТИ</span></h2>
+                    <h2 class="oblast__title">РАЙОНЫ РАЙОНЫ<br><span>ЛИПЕЦКОЙ ОБЛАСТИ</span></h2>
                 </div>
             </div>
             <div class="photo__container">
@@ -103,13 +103,13 @@
             </div>
         </div>
     </section>
-    <!-- <section class="section history__section" id="history">
+    <section class="section history__section" id="history">
         <div class="container">
             <h4 class="history__mini__title">ИСТОРИЯ</h4>
-            <div class="swiper history__swiper">
+            <div class="history__swiper">
 
-                <div class="swiper-wrapper">
-                    <div class="wrap history__wrap swiper-slide">
+                <div class="history__wrap-swiper">
+                    <div class="wrap history__wrap">
                         <div class="inner history__text__inner">
                             <h2 class="history__title">СЛАВЯНСКИЙ ПЕРИОД</h2>
                             <p class="history__text">Липецкая область — российский регион в Верхнем Подонье.</p><p>К верхнему палеолиту на территории Липецкой области относится стоянка граветтской культуры Гагарино, к эпиграветтской культуре — стоянка Замятино 14 в Задонском районе. Следы поселения абашевской культуры бронзового века обнаружены в районе поселка Вербилово. В районе сёл Ссёлки и Фомино-Негачевка найдены поселения репинской, абашевской, срубной и городецкой культур 
@@ -122,7 +122,7 @@
                             <div class="history__photo__container_2"><img alt="Заглушка" src="images/slavane-2.webp"></div>
                         </div>
                     </div>
-                    <div class="wrap history__wrap_reverse history__wrap swiper-slide">
+                    <div class="wrap history__wrap_reverse history__wrap">
                         <div class="inner history__picture__inner">
                             <div class="history__photo__container_2 history__photo__container_2_reverse"><img alt="Заглушка" src="images/nabegijpg.webp" class="osobennaya__kartinka"></div>
                         </div>
@@ -137,7 +137,7 @@
                         </div>
                     </div>
         
-                    <div class="wrap history__wrap swiper-slide">
+                    <div class="wrap history__wrap">
                         <div class="inner history__text__inner">
                             <h2 class="history__title">БЕЛГОРОДСКАЯ ЧЕРТА</h2>
                             <p class="history__text">	
@@ -154,7 +154,7 @@
                         </div>
                     </div>
 
-                    <div class="wrap history__wrap_reverse history__wrap swiper-slide">
+                    <div class="wrap history__wrap_reverse history__wrap">
                         <div class="inner history__picture__inner">
                             <div class="history__photo__container_2 history__photo__container_2_reverse"><img alt="Заглушка" src="images/zavod.webp"></div>
                         </div>
@@ -168,7 +168,7 @@
                         </div>
                     </div>
 
-                    <div class="wrap history__wrap swiper-slide">
+                    <div class="wrap history__wrap">
                         <div class="inner history__text__inner">
                             <h2 class="history__title">РЕГИОН В СОСТАВЕ ГУБЕРНИЙ</h2>
                             <p class="history__text">	
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                     
-                    <div class="wrap history__wrap_reverse history__wrap swiper-slide">
+                    <div class="wrap history__wrap_reverse history__wrap">
                         <div class="inner history__picture__inner">
                             <div class="history__photo__container_4"><img alt="Заглушка" src="images/lipetsk(1).webp"></div>
                             
@@ -215,8 +215,8 @@
                 <div class="swiper-button-next history__next"></div>
             </div>
         </div>
-    </section> -->
-    <section class="section history__section" id="history">
+    </section>
+    <!-- <section class="section history__section" id="history">
         <div class="container">
             <h4 class="history__mini__title">ИСТОРИЯ</h4>
                 <div class="wrap history__wrap">
@@ -319,7 +319,7 @@
                     </div>
                 </div>
         </div>
-    </section>
+    </section> -->
     <section class="section gallery__section" id="gallery">
         <div class="container">
             <div class="wrap gallery__wrap">
@@ -514,6 +514,31 @@
 
   <!-- Initialize Swiper -->
 <script>
+    if(document.documentElement.offsetWidth <= 1024){
+        let swpr = document.querySelector('.history__swiper');
+        let swpr__wrap = document.querySelector('.history__wrap-swiper');
+        let swpr__slide = document.querySelectorAll('.history__wrap');
+
+        swpr__slide.forEach(e => {
+            e.classList.add('swiper-slide');
+        });
+
+        swpr.classList.add('swiper');
+        swpr__wrap.classList.add('swiper-wrapper');
+        var swiper2 = new Swiper(".history__swiper", {
+            spaceBetween: 100,
+            slidesPerView: 1,
+            pagination: {
+                el: ".history__pag",
+                clickable: true,
+            },
+            
+            navigation: {
+                prevEl: '.history__prev',
+                nextEl: '.history__next',
+            },
+        });
+    }
     var swiper = new Swiper(".mySwiper", {
         breakpoints: {
             1024:{
